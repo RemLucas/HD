@@ -1,0 +1,59 @@
+/*Responsive*/
+
+
+/*Mobile 740*/
+
+@media (max-width: 1200px) {
+    #header {
+        display: block;
+        padding: 10px 0px;
+    }
+    #header.sticky #logo {
+        margin-left: 0px;
+        margin-bottom: 5px;
+    }
+    #logo {
+        margin-left: 0px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .wrap {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    ul#main-menu {
+        display: none;
+    }
+    #slider-highlight {
+        margin-top: 120px;
+        display: block;
+    }
+    .slider-highlight-slider {
+        padding-right: 10px;
+        max-width: 100%;
+    }
+    .slider-highlight-highlight {
+        margin-top: 5px;
+        padding-right: 0px;
+        flex-wrap: unset;
+    }
+    .slider-highlight-highlight-image1 {
+        margin-bottom: 0px;
+    }
+    .slider-highlight-highlight-image2 {
+        margin-bottom: 0px;
+    }
+    .slider-highlight-highlight-image3 {
+        padding-left: 10px;
+    }
+    .slider-highlight-highlight-image4 {
+        padding-right: 10px;
+    }
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+    .grid-item {
+        height: 300px;
+    }
+}

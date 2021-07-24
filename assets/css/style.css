@@ -287,6 +287,10 @@ ul#main-menu a:hover {
     transition: transform 300ms;
 }
 
+.promo-image-detail {
+    height: 200px;
+}
+
 .promo-name {
     margin-top: 5px;
     font-size: 20px;

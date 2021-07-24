@@ -56,6 +56,9 @@
     .grid-item {
         height: 300px;
     }
+    .promo-image {
+    margin: 10px auto;
+}
     .promo-image-detail {
         height: 150px;
     }

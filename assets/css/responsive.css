@@ -30,7 +30,7 @@
         display: block;
     }
     .slider-highlight-slider {
-        padding-right: 10px;
+        margin-right: 10px;
         max-width: 100%;
     }
     .slider-highlight-highlight {
@@ -56,9 +56,14 @@
     .grid-item {
         height: 300px;
     }
+    .grid-item:hover:disabled .promo-image {
+        transform: none;
+        pointer-events: none;
+        display: none;
+    }
     .promo-image {
-    margin: 10px auto;
-}
+        margin: 10px auto;
+    }
     .promo-image-detail {
         height: 150px;
     }

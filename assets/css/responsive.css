@@ -77,16 +77,35 @@
     }
     .wrap {
         /*display: none;*/
-        width: auto;
+        width: 40px;
+    }
+    .wrap:hover {
+        width: -webkit-calc(100% - 50px);
+        margin: auto 5px auto 0px;
+    }
+    .wrap:hover .searchTerm {
+        width: 100%;
+        border: 3px solid red;
+        padding: 5px;
+    }
+    .wrap:hover .searchButton {
+        border-radius: 0px 5px 5px 0px;
     }
     .searchTerm {
-        display: none;
+        width: 0px;
+        margin: 0px;
+        padding: 0px;
+        border: transparent;
     }
     .searchButton {
         border-radius: 5px;
     }
     ul#main-menu {
         display: none;
+    }
+    .menu-top-right {
+        width: 100%;
+        justify-content: flex-end;
     }
     .slider-highlight-slider {
         margin-right: 10px;

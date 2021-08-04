@@ -70,6 +70,11 @@
 /*Mobile 740*/
 
 @media (max-width: 740px) {
+    #promo h2 {
+        font-size: 1em;
+        padding-top: 0px;
+        padding-left: 10px;
+    }
     .wrap {
         /*display: none;*/
         width: auto;

@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -18,8 +21,8 @@
 
             <div class="wrap">
                 <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Bạn cần tìm gì ?">
-                    <button type="submit" class="searchButton ti-search"></button>
+                    <input type="text" id=searchTerm class="searchTerm" placeholder="Bạn cần tìm gì ?">
+                    <button id="searchButton" type="submit" class="searchButton ti-search" onclick="push()"></button>
                 </div>
             </div>
 
@@ -35,7 +38,17 @@
 
         <div id="slider-highlight">
             <div class="slider-highlight-slider">
-                <img class="image-slider" src="./assets/image/slide/1.png">
+                <div class="slide-wrapper">
+                    <div class="slide active">
+                        <img class="image-slider" src="./assets/image/slide/1.png">
+                    </div>
+                    <div class="slide">
+                        <img class="image-slider" src="./assets/image/slide/2.png">
+                    </div>
+                    <div class="slide">
+                        <img class="image-slider" src="./assets/image/slide/3.png">
+                    </div>
+                </div>
             </div>
             <div class="slider-highlight-highlight">
                 <div class="slider-highlight-highlight-image1">
@@ -54,7 +67,7 @@
         </div>
 
         <div id="promo">
-            <h2>Săn sale mỗi ngày</h2>
+            <h2>SĂN SALE MỖI NGÀY</h2>
             <div class="grid-container">
                 <div class="grid-item">
                     <!--<div class="promo-top">Trả trước 0đ</div>-->
@@ -181,40 +194,14 @@
                 aliquet urna molestie sed. In hac habitasse platea dictumst. Aenean tempor mattis dolor sed condimentum. Donec sit amet iaculis dolor. Donec lobortis semper consequat. Phasellus id mauris ac lacus sagittis finibus ac non enim. Vivamus
                 a mauris sit amet tortor volutpat gravida. Aenean pulvinar placerat justo, in mattis mauris interdum sed. Mauris ligula eros, pulvinar eget blandit vitae, vestibulum a lectus. Aliquam erat volutpat.
             </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at est orci. Nam semper commodo efficitur. Sed id porttitor lectus. Sed congue pellentesque eros vitae dignissim. Vestibulum sollicitudin nisl nibh, finibus semper dui lacinia
-                in. Suspendisse cursus venenatis porta. Fusce et accumsan urna. Phasellus dictum, diam id egestas finibus, sapien neque imperdiet metus, in tincidunt lorem sem in nisi. Donec mattis nisi sed suscipit suscipit. Suspendisse at facilisis
-                magna. Phasellus nisl dolor, consequat nec imperdiet et, lacinia vel velit. Cras felis erat, sollicitudin in nisi a, fringilla pretium mi. Suspendisse ac accumsan risus, et porttitor ante. Sed in arcu eget lorem sagittis pellentesque euismod
-                vitae nisl. Suspendisse erat nisl, aliquet ac volutpat sed, vehicula eget mi. Aenean id urna est. Suspendisse tortor nunc, ultrices id fringilla vel, vestibulum sit amet purus. Donec lorem quam, posuere ac blandit at, egestas sed tellus.
-                Sed rhoncus, nulla ut tincidunt mattis, quam felis finibus lorem, vitae fringilla nibh lectus in lacus. Vestibulum dictum dui purus, at pulvinar nisl aliquet eget. Etiam porta, urna a porttitor consequat, est mauris interdum dui, vitae
-                auctor eros quam ac nunc. Suspendisse mauris dui, lacinia ac nulla vel, gravida gravida ante. Donec rutrum, augue non tempus volutpat, sapien nisi auctor elit, nec blandit eros sem et lacus. Ut ac nunc nibh. Suspendisse vel cursus arcu.
-                Nulla mollis porttitor lectus, ac euismod est tristique at. Donec id nunc eu risus lacinia euismod nec quis nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris feugiat semper lacus, non
-                aliquet urna molestie sed. In hac habitasse platea dictumst. Aenean tempor mattis dolor sed condimentum. Donec sit amet iaculis dolor. Donec lobortis semper consequat. Phasellus id mauris ac lacus sagittis finibus ac non enim. Vivamus
-                a mauris sit amet tortor volutpat gravida. Aenean pulvinar placerat justo, in mattis mauris interdum sed. Mauris ligula eros, pulvinar eget blandit vitae, vestibulum a lectus. Aliquam erat volutpat.
-            </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at est orci. Nam semper commodo efficitur. Sed id porttitor lectus. Sed congue pellentesque eros vitae dignissim. Vestibulum sollicitudin nisl nibh, finibus semper dui lacinia
-                in. Suspendisse cursus venenatis porta. Fusce et accumsan urna. Phasellus dictum, diam id egestas finibus, sapien neque imperdiet metus, in tincidunt lorem sem in nisi. Donec mattis nisi sed suscipit suscipit. Suspendisse at facilisis
-                magna. Phasellus nisl dolor, consequat nec imperdiet et, lacinia vel velit. Cras felis erat, sollicitudin in nisi a, fringilla pretium mi. Suspendisse ac accumsan risus, et porttitor ante. Sed in arcu eget lorem sagittis pellentesque euismod
-                vitae nisl. Suspendisse erat nisl, aliquet ac volutpat sed, vehicula eget mi. Aenean id urna est. Suspendisse tortor nunc, ultrices id fringilla vel, vestibulum sit amet purus. Donec lorem quam, posuere ac blandit at, egestas sed tellus.
-                Sed rhoncus, nulla ut tincidunt mattis, quam felis finibus lorem, vitae fringilla nibh lectus in lacus. Vestibulum dictum dui purus, at pulvinar nisl aliquet eget. Etiam porta, urna a porttitor consequat, est mauris interdum dui, vitae
-                auctor eros quam ac nunc. Suspendisse mauris dui, lacinia ac nulla vel, gravida gravida ante. Donec rutrum, augue non tempus volutpat, sapien nisi auctor elit, nec blandit eros sem et lacus. Ut ac nunc nibh. Suspendisse vel cursus arcu.
-                Nulla mollis porttitor lectus, ac euismod est tristique at. Donec id nunc eu risus lacinia euismod nec quis nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris feugiat semper lacus, non
-                aliquet urna molestie sed. In hac habitasse platea dictumst. Aenean tempor mattis dolor sed condimentum. Donec sit amet iaculis dolor. Donec lobortis semper consequat. Phasellus id mauris ac lacus sagittis finibus ac non enim. Vivamus
-                a mauris sit amet tortor volutpat gravida. Aenean pulvinar placerat justo, in mattis mauris interdum sed. Mauris ligula eros, pulvinar eget blandit vitae, vestibulum a lectus. Aliquam erat volutpat.
-            </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at est orci. Nam semper commodo efficitur. Sed id porttitor lectus. Sed congue pellentesque eros vitae dignissim. Vestibulum sollicitudin nisl nibh, finibus semper dui lacinia
-                in. Suspendisse cursus venenatis porta. Fusce et accumsan urna. Phasellus dictum, diam id egestas finibus, sapien neque imperdiet metus, in tincidunt lorem sem in nisi. Donec mattis nisi sed suscipit suscipit. Suspendisse at facilisis
-                magna. Phasellus nisl dolor, consequat nec imperdiet et, lacinia vel velit. Cras felis erat, sollicitudin in nisi a, fringilla pretium mi. Suspendisse ac accumsan risus, et porttitor ante. Sed in arcu eget lorem sagittis pellentesque euismod
-                vitae nisl. Suspendisse erat nisl, aliquet ac volutpat sed, vehicula eget mi. Aenean id urna est. Suspendisse tortor nunc, ultrices id fringilla vel, vestibulum sit amet purus. Donec lorem quam, posuere ac blandit at, egestas sed tellus.
-                Sed rhoncus, nulla ut tincidunt mattis, quam felis finibus lorem, vitae fringilla nibh lectus in lacus. Vestibulum dictum dui purus, at pulvinar nisl aliquet eget. Etiam porta, urna a porttitor consequat, est mauris interdum dui, vitae
-                auctor eros quam ac nunc. Suspendisse mauris dui, lacinia ac nulla vel, gravida gravida ante. Donec rutrum, augue non tempus volutpat, sapien nisi auctor elit, nec blandit eros sem et lacus. Ut ac nunc nibh. Suspendisse vel cursus arcu.
-                Nulla mollis porttitor lectus, ac euismod est tristique at. Donec id nunc eu risus lacinia euismod nec quis nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris feugiat semper lacus, non
-                aliquet urna molestie sed. In hac habitasse platea dictumst. Aenean tempor mattis dolor sed condimentum. Donec sit amet iaculis dolor. Donec lobortis semper consequat. Phasellus id mauris ac lacus sagittis finibus ac non enim. Vivamus
-                a mauris sit amet tortor volutpat gravida. Aenean pulvinar placerat justo, in mattis mauris interdum sed. Mauris ligula eros, pulvinar eget blandit vitae, vestibulum a lectus. Aliquam erat volutpat.
-            </p>
         </div>
 
         <div id="footer">
-
+            <ul class="footer-list">
+                <li>Create by R ^_^</li>
+                <li class="ti-facebook"></li>
+                <li></li>
+            </ul>
         </div>
     </div>
 
@@ -229,6 +216,17 @@
                     $(header).removeClass('sticky')
                 }
             });
+        });
+    </script>
+
+    <!--Search enter-->
+    <script>
+        var input = document.getElementById("searchTerm");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("searchButton").click();
+            }
         });
     </script>
 </body>

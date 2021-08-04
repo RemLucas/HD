@@ -20,6 +20,7 @@
     #menuButton {
         display: block;
         border-radius: 5px;
+        margin-right: 10px;
     }
     #slider-highlight {
         margin-top: 65px;

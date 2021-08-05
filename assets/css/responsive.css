@@ -50,9 +50,6 @@
     .grid-container {
         grid-template-columns: auto auto auto;
     }
-    .grid-item {
-        height: 300px;
-    }
     .grid-item:hover:disabled .promo-image {
         transform: none;
         pointer-events: none;
@@ -60,9 +57,6 @@
     }
     .promo-image {
         margin: 10px auto;
-    }
-    .promo-image-detail {
-        height: 170px;
     }
 }
 
@@ -84,7 +78,7 @@
         margin: auto 5px auto 0px;
     }
     .wrap:hover .searchTerm {
-        width: 100%;
+        flex: 1;
         border: 3px solid red;
         padding: 5px;
     }
@@ -92,7 +86,7 @@
         border-radius: 0px 5px 5px 0px;
     }
     .searchTerm {
-        width: 0px;
+        flex: 0;
         margin: 0px;
         padding: 0px;
         border: transparent;

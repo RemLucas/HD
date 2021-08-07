@@ -51,51 +51,35 @@ function push() {
 
 function getData() {
     const dbRef = firebase.database().ref();
-    dbRef.child("highlightSlider").get().then((snapshot) => {
+    dbRef.child("Product").get().then((snapshot) => {
         if (snapshot.exists()) {
             console.log(snapshot.val());
-            var items = snapshot.val();
-            var keys = Object.keys(items);
-            console.log(keys);
-            var slider = keys[1];
-            var sliders = items[slider].sliders;
-            var highlight = keys[0];
-            var highlights = items[highlight].highlights;
-            console.log(sliders);
-            console.log(highlights);
-            //console.log(snapshot.value);
-            /*var div = document.createElement("div");
-            div.style.width = "100px";
-            div.style.height = "100px";
-            div.style.background = "red";
-            div.style.color = "white";
-            div.innerHTML = "Hello";
-
-            document.getElementById("slider-highlight").appendChild(div);*/
+            var data = snapshot.val();
+            var con = 1;
+            for (const keys in data) {
+                var items = data[keys]
+                for (const key in items) {
+                    var item = items[key];
+                    console.log(item);
+                }
+            }
         } else {
             console.log("No data available");
         }
     }).catch((error) => {
         console.error(error);
     });
-    /*<div class="slider-highlight-slider">
-                <img class="image-slider" src="./assets/image/slide/1.png">
-            </div>
-            <div class="slider-highlight-highlight">
-                <div class="slider-highlight-highlight-image1">
-                    <img class="image-highlight" src="./assets/image/slide/1.jpg">
-                </div>
-                <div class="slider-highlight-highlight-image2">
-                    <img class="image-highlight" src="./assets/image/slide/2.jpg">
-                </div>
-                <div class="slider-highlight-highlight-image3">
-                    <img class="image-highlight" src="./assets/image/slide/3.jpg">
-                </div>
-                <div class="slider-highlight-highlight-image4">
-                    <img class="image-highlight" src="./assets/image/slide/4.jpg">
-                </div>
-            </div>*/
 }
+
+//console.log(snapshot.value);
+/*var div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+div.style.background = "red";
+div.style.color = "white";
+div.innerHTML = "Hello";
+
+document.getElementById("slider-highlight").appendChild(div);*/
 
 function setData() {
     var data = "rwerrwe";
@@ -103,4 +87,57 @@ function setData() {
     dataRef.set({
         vaue: data
     });
+}
+
+/*Test add data*/
+function addProduct() {
+    var select = document.getElementById('select-product');
+    var value = select.options[select.selectedIndex].value;
+    var name = document.getElementById('name').value;
+    var color = document.getElementById('color').value;
+    var price = document.getElementById('price').value;
+    var amount = document.getElementById('amount').value;
+    console.log(value, name, color, price, amount);
+
+    var dataRef = database.ref('/Product').push();
+    dataRef.set({
+        name: value + ' ' + name,
+        color: color,
+        price: price,
+        amount: amount
+    });
+}
+
+function searchProduct() {
+    let searchText = document.getElementById('searchText').value;
+    console.log(searchText);
+    const dbRef = firebase.database().ref('Product');
+    dbRef.orderByChild('name').startAfter(searchText).on('value', function(snapshot) {
+        console.log(snapshot.key);
+    });
+    /*dbRef.orderByChild('name').on('child_added', snap => {
+        console.log(snap.val());
+        const li = document.createElement('li');
+        li.innerText = snap.val().book;
+        li.id = snap.key;
+        ulList.appendChild(li);
+    });*/
+    /*dbRef.child("Product").get().then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+            var data = snapshot.val();
+            var con = 1;
+            for (const keys in data) {
+                var items = data[keys]
+                for (const key in items) {
+                    var item = items[key];
+                    console.log(item);
+                }
+            }
+        } else {
+            console.log("No data available");
+        }
+    }).catch((error) => {
+        console.error(error);
+    });*/
 }

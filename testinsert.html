@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="testinsert.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
     <script src="./index.js"></script>
     <title>Document</title>
 </head>
@@ -24,21 +24,19 @@
     </div>
     <div class="product">
         <input type="text" id=name class="product-item" placeholder="Tên">
-    </div>
-    <div class="product">
         <input type="text" id=color class="product-item" placeholder="Màu">
-    </div>
-    <div class="product">
         <input type="text" id=price class="product-item" placeholder="Giá">
-    </div>
-    <div class="product">
         <input type="text" id=amount class="product-item" placeholder="Số lượng">
     </div>
     <button id="addButton" type="submit" class="addButton ti-save" onclick="addProduct()"></button>
 
     <div class="search">
         <input type="text" id=searchText class="product-item" placeholder="Tìm kiếm">
-        <button id="searchButton" type="submit" class="addButton ti-search" onclick="searchProduct()"></button>
+        <button id="searchButton" type="submit" class="addButton ti-search" onclick="searchData()"></button>
+    </div>
+    <div class="content">
+        <form id="add-list-form"></form>
+        <ul id="list"></ul>
     </div>
 </body>
 

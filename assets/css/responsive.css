@@ -108,4 +108,10 @@
     .grid-container {
         grid-template-columns: auto auto;
     }
+    .services {
+        flex-direction: column;
+    }
+    .services-box {
+        width: -webkit-calc(100% - 20px);
+    }
 }

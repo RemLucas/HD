@@ -7,6 +7,8 @@ var firebaseConfig = {
     appId: "1:1041928921433:web:1774f0a8aab1ccda106c48",
     measurementId: "G-N7QRF48JVC"
 };
+var menuActive = Boolean(false);
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 //firebase.analytics();
@@ -86,4 +88,20 @@ function searchData() {
             renderList(doc);
         });
     });
+}
+
+//Open menu
+function clickMenu() {
+    console.log(menuActive);
+    var menu = document.getElementById("menu");
+    var menuButton = document.getElementById("menuButton");
+    if (menuActive) {
+        menu.classList.remove("is-active");
+        menuButton.classList.replace("ti-close", "ti-menu-alt")
+        menuActive = false;
+    } else {
+        menu.classList.add("is-active");
+        menuButton.classList.replace("ti-menu-alt", "ti-close")
+        menuActive = true;
+    }
 }

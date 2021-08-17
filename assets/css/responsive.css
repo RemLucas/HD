@@ -108,10 +108,19 @@
     .grid-container {
         grid-template-columns: auto auto;
     }
+    #footer footer {
+        flex-direction: column;
+    }
     .services {
         flex-direction: column;
     }
     .services-box {
         width: -webkit-calc(100% - 20px);
+    }
+    .subscribe {
+        width: 100%;
+    }
+    .subscribe form {
+        margin-top: 10px;
     }
 }

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="" class="menu-link">Trang chủ</a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="menu-link">Sản phẩm</a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="menu-link">Sửa chữa</a>
+            </li>
+            <li class="menu-contact">
+                <a href="https://www.facebook.com/hdmobilehue234/" target="_blank" rel="noopener noreferrer" class="menu-link ti-facebook"></a>
+                <a href="" class="menu-link ti-facebook"></a>
+                <a href="tel:0908267567" class="menu-link ti-headphone-alt"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <div id="header">
+            <a href="" id="logo">HD MOBILE</a>
+
+            <div class="menu-top-right">
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" id=searchTerm class="searchTerm" placeholder="Bạn cần tìm gì ?">
+                        <button id="searchButton" type="submit" class="searchButton ti-search"></button>
+                        <!--<button id="searchButton" type="submit" class="searchButton ti-search" onclick="push()"></button>-->
+                    </div>
+                </div>
+
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li><a href="repair.html">Sửa chữa</a></li>
+                        <li><a href="infomation.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <button id="menuButton" class="menuButton" onclick="clickMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span></button>
+            </div>
+        </div>
+
+        <div id="slider-highlight">
+            <div class="slider-highlight-slider">
+                <div class="slide-wrapper">
+                    <div class="slide active">
+                        <img class="image-slider" src="./assets/image/slide/1.png">
+                    </div>
+                    <div class="slide">
+                        <img class="image-slider" src="./assets/image/slide/2.png">
+                    </div>
+                    <div class="slide">
+                        <img class="image-slider" src="./assets/image/slide/3.png">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-highlight-highlight">
+                <div class="slider-highlight-highlight-image1">
+                    <img class="image-highlight" src="./assets/image/slide/1.jpg">
+                </div>
+                <div class="slider-highlight-highlight-image2">
+                    <img class="image-highlight" src="./assets/image/slide/2.jpg">
+                </div>
+                <div class="slider-highlight-highlight-image3">
+                    <img class="image-highlight" src="./assets/image/slide/3.jpg">
+                </div>
+                <div class="slider-highlight-highlight-image4">
+                    <img class="image-highlight" src="./assets/image/slide/4.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div id="promo">
+            <h2>SĂN SALE MỖI NGÀY</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/1.jpg">
+                        </div>
+                        <div class="promo-name">Iphone 11 - 64GB</div>
+                        <div class="promo-price">14.500.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/2.jpg">
+                        </div>
+                        <div class="promo-name">Iphone 12 - 64GB</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/3.jpg">
+                        </div>
+                        <div class="promo-name">Iphone 12 Pro - 64GB</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/4.jpg">
+                        </div>
+                        <div class="promo-name">Iphone 12 Pro Max - 64GB</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/5.jpg">
+                        </div>
+                        <div class="promo-name">Samsung Galaxy Note 20 Ultra</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/6.jpg">
+                        </div>
+                        <div class="promo-name">Samsung Galaxy Note 20</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-hot">Trả trước 0Đ</div>
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/7.jpg">
+                        </div>
+                        <div class="promo-name">Samsung Galaxy S21 Ultra</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/8.jpg">
+                        </div>
+                        <div class="promo-name">Xiaomi Poco X3 Pro</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/9.jpg">
+                        </div>
+                        <div class="promo-name">Xiaomi Redmi Note 8</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <!--<div class="promo-top">Trả trước 0đ</div>-->
+                    <div class="promo-detail">
+                        <div class="promo-image">
+                            <img class="promo-image-detail" src="./assets/image/promo/10.jpg">
+                        </div>
+                        <div class="promo-name">Xiaomi Redmi Note 10 5G</div>
+                        <div class="promo-price">15.000.000đ</div>
+                        <div class="promo-discount">Tặng đầy đủ phụ kiện...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+            <p> Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div id="footer">
+            <!--services------------------------->
+            <section class="services">
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="ti-truck"></i>
+                    <span>Giao hàng nhanh</span>
+                    <p>Miễn phí vận chuyển</p>
+                </div>
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="ti-reload"></i>
+                    <span>Đổi trả miễn phí</span>
+                    <p>Đổi trả trong 30 ngày</p>
+                </div>
+                <!--services-box---------->
+                <div class="services-box">
+                    <i class="ti-headphone"></i>
+                    <span>Cần hỗ trợ?</span>
+                    <p>
+                        <a href="https://www.facebook.com/hdmobilehue234/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a>-</a>
+                        <a href="tel:0908267567" target="_blank" rel="noopener noreferrer">090 826 75 67</a>
+                    </p>
+                </div>
+
+            </section>
+            <!--footer---------------------------->
+            <footer>
+                <!--copyright-------------->
+                <span class="copyright">
+                    2021 - Rem
+                </span>
+                <!--subcribe---------------->
+                <div class="subscribe">
+                    <form>
+                        <input class="email" type="email" placeholder="Example@gmail.com" required/>
+                        <input type="submit" value="Đăng ký">
+                    </form>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var header = document.getElementById('header')
+                if ($(this).scrollTop()) {
+                    $(header).addClass('sticky')
+                } else {
+                    $(header).removeClass('sticky')
+                }
+            });
+        });
+    </script>
+
+    <!--Search enter-->
+    <script>
+        var input = document.getElementById("searchTerm");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("searchButton").click();
+            }
+        });
+    </script>
+</body>
+
+</html>

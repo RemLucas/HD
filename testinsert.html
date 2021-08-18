@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testinsert.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="./index.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product">Hãng:
+        <select name="select-product" id="select-product">
+            <option value="Samsung">Samsung</option>
+            <option value="Iphone">Iphone</option>
+            <option value="Xiaomi">Xiaomi</option>
+            <option value="LG">LG</option>
+          </select>
+    </div>
+    <div class="product">
+        <input type="text" id=name class="product-item" placeholder="Tên">
+        <input type="text" id=color class="product-item" placeholder="Màu">
+        <input type="text" id=price class="product-item" placeholder="Giá">
+        <input type="text" id=amount class="product-item" placeholder="Số lượng">
+    </div>
+    <button id="addButton" type="submit" class="addButton ti-save" onclick="addProduct()"></button>
+
+    <div class="search">
+        <input type="text" id=searchText class="product-item" placeholder="Tìm kiếm">
+        <button id="searchButton" type="submit" class="addButton ti-search" onclick="searchData()"></button>
+    </div>
+    <div class="content">
+        <form id="add-list-form"></form>
+        <ul id="list"></ul>
+    </div>
+</body>
+
+</html>

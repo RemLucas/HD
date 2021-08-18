@@ -1,0 +1,126 @@
+/*Responsive*/
+
+
+/*Tablet*/
+
+@media (max-width: 1200px) {
+    #header.sticky #logo {
+        margin-left: 10px;
+        /*margin-bottom: 5px;*/
+    }
+    #logo {
+        margin-left: 10px;
+        /*text-align: center;
+        margin-bottom: 10px;*/
+        font-size: 30px;
+    }
+    ul#main-menu {
+        display: none;
+    }
+    #menuButton {
+        display: block;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    #slider-highlight {
+        margin-top: 65px;
+        display: block;
+    }
+    .slider-highlight-slider {
+        margin-right: 10px;
+        max-width: 100%;
+    }
+    .slider-highlight-highlight {
+        margin-top: 10px;
+        padding-right: 0px;
+        flex-wrap: unset;
+    }
+    .slider-highlight-highlight-image1 {
+        margin-bottom: 0px;
+    }
+    .slider-highlight-highlight-image2 {
+        margin-bottom: 0px;
+    }
+    .slider-highlight-highlight-image3 {
+        padding-left: 10px;
+    }
+    .slider-highlight-highlight-image4 {
+        padding-right: 10px;
+    }
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+    .grid-item:hover:disabled .promo-image {
+        transform: none;
+        pointer-events: none;
+        display: none;
+    }
+    .promo-image {
+        margin: 10px auto;
+    }
+}
+
+
+/*Mobile 740*/
+
+@media (max-width: 740px) {
+    #promo h2 {
+        font-size: 1em;
+        padding-top: 0px;
+        padding-left: 10px;
+    }
+    .wrap {
+        /*display: none;*/
+        width: 40px;
+    }
+    .wrap:hover {
+        width: -webkit-calc(100% - 50px);
+        margin: auto 5px auto 0px;
+    }
+    .wrap:hover .searchTerm {
+        flex: 1;
+        border: 3px solid red;
+        padding: 5px;
+    }
+    .wrap:hover .searchButton {
+        border-radius: 0px 5px 5px 0px;
+    }
+    .searchTerm {
+        flex: 0;
+        margin: 0px;
+        padding: 0px;
+        border: transparent;
+    }
+    .searchButton {
+        border-radius: 5px;
+    }
+    ul#main-menu {
+        display: none;
+    }
+    .menu-top-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .slider-highlight-slider {
+        margin-right: 10px;
+        max-width: 100%;
+    }
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+    #footer footer {
+        flex-direction: column;
+    }
+    .services {
+        flex-direction: column;
+    }
+    .services-box {
+        width: -webkit-calc(100% - 20px);
+    }
+    .subscribe {
+        width: 100%;
+    }
+    .subscribe form {
+        margin-top: 10px;
+    }
+}

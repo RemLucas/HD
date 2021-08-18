@@ -161,6 +161,7 @@
 .searchButton {
     width: 40px;
     height: 36px;
+    font-weight: bolder;
     border: 1px solid red;
     background: red;
     text-align: center;

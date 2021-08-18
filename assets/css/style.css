@@ -229,7 +229,7 @@ ul#main-menu a:hover {
 /*Mobile menu*/
 
 #menuButton {
-    display: flex;
+    display: none;
     flex-direction: column;
     direction: rtl;
     cursor: pointer;

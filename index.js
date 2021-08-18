@@ -97,11 +97,15 @@ function clickMenu() {
     var menuButton = document.getElementById("menuButton");
     if (menuActive) {
         menu.classList.remove("is-active");
-        menuButton.classList.replace("ti-close", "ti-menu-alt")
+        menuButton.classList.remove("is-active");
         menuActive = false;
     } else {
         menu.classList.add("is-active");
-        menuButton.classList.replace("ti-menu-alt", "ti-close")
+        menuButton.classList.add("is-active");
         menuActive = true;
     }
+}
+
+function calculatewidth() {
+    return 500;
 }
